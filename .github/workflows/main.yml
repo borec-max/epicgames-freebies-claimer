@@ -21,4 +21,4 @@ jobs:
           EPIC_EMAIL: ${{ secrets.EPIC_EMAIL }}
           EPIC_PASSWORD: ${{ secrets.EPIC_PASSWORD }}
           EPIC_TOTP_SECRET: ${{ secrets.EPIC_TOTP_SECRET }}
-        run: python epic-games.js
+        run: python main.py
