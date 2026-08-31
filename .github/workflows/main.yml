@@ -16,5 +16,18 @@ jobs:
           node-version: '20'
       - name: Install Dependencies
         run: npm install
+      - name: Create Config File
+        run: |
+          mkdir -p data
+          echo '{
+            "email": "${{secrets.EPIC_EMAIL}}",
+            "password": "${{secrets.EPIC_PASSWORD}}",
+            "totp": "${{secrets.EPIC_TOTP_SECRET}}",
+            "appriseUrl": null,
+            "delay": 1440,
+            "loop": false,
+            "notifyIfNoUnclaimedFreebies": false,
+            "options": {}
+          }' > data/config.json
       - name: Run Claimer
         run: node claimer.js
