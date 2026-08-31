@@ -17,8 +17,4 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Run Claimer
-        env:
-          EMAIL: ${{ secrets.EPIC_EMAIL }}
-          PASSWORD: ${{ secrets.EPIC_PASSWORD }}
-          TOTP: ${{ secrets.EPIC_TOTP_SECRET }}
-       run: node claimer.js
+        run: node claimer.js
