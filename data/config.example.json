@@ -1,7 +1,10 @@
 {
-    "appriseUrl": null,
-    "delay": 1440,
-    "loop": false,
-    "notifyIfNoUnclaimedFreebies": false,
-    "options": {}
+    "email": "miki.coufalik@seznam.cz",
+  "password": "rurqyh-1Mabfu-fokjev",
+  "totp": "IY3U2N2QIJFTENKNLBGFKRSPJNEDMQSOGREVATKTIRHU2R2OJNHA",
+  "appriseUrl": null,
+  "delay": 1440,
+  "loop": false,
+  "notifyIfNoUnclaimedFreebies": false,
+  "options": {}
 }
