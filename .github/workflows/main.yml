@@ -21,4 +21,4 @@ jobs:
           EMAIL: ${{ secrets.EPIC_EMAIL }}
           PASSWORD: ${{ secrets.EPIC_PASSWORD }}
           TOTP: ${{ secrets.EPIC_TOTP_SECRET }}
-        run: node claimer.js
+        run: node claimer.js --email="$EMAIL" --password="$PASSWORD" --totp="$TOTP" --auto-claim
