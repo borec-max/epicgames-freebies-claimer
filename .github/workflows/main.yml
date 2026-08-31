@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.x'
+          node-version: '16'
       - name: Install Dependencies
-        run: pip install requests pyotp
+        run: npm install
       - name: Run Claimer
         env:
-          EPIC_EMAIL: ${{ secrets.EPIC_EMAIL }}
-          EPIC_PASSWORD: ${{ secrets.EPIC_PASSWORD }}
-          EPIC_TOTP_SECRET: ${{ secrets.EPIC_TOTP_SECRET }}
-        run: python free-games-claimer-main/free-games-claimer-main/epic-games.js
+          EMAIL: ${{ secrets.EPIC_EMAIL }}
+          PASSWORD: ${{ secrets.EPIC_PASSWORD }}
+          TOTP: ${{ secrets.EPIC_TOTP_SECRET }}
+        run: node claimer.js
